@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BrightMind Academy – Where Excellence Begins</title>
+<meta name="description" content="BrightMind Academy offers premium education from Nursery to Class 12, IIT-JEE, NEET coaching & skill development. Apply online today.">
+<meta name="keywords" content="school admission, education classes, coaching, IIT JEE, NEET, Pune, BrightMind Academy">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --deep: #0f0c29;
+  --royal: #1a1560;
+  --indigo: #302b8a;
+  --violet: #6c63ff;
+  --violet-light: #9c95ff;
+  --gold: #f5c842;
+  --gold-dark: #d4a820;
+  --white: #ffffff;
+  --cream: #fafaf7;
+  --gray: #64748b;
+  --gray-light: #f1f5f9;
+  --border: #e2e8f0;
+  --text: #1e1b4b;
+  --green: #10b981;
+  --orange: #f59e0b;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Plus Jakarta Sans',sans-serif;color:var(--text);background:var(--white);overflow-x:hidden;}
+
+/* PARTICLES BG */
+.particles{position:absolute;inset:0;overflow:hidden;pointer-events:none;}
+.particle{position:absolute;border-radius:50%;animation:float linear infinite;opacity:0.15;}
+@keyframes float{0%{transform:translateY(100vh) rotate(0deg);}100%{transform:translateY(-100px) rotate(720deg);}}
+
+/* NAV */
+nav{position:fixed;top:0;width:100%;z-index:1000;background:rgba(15,12,41,0.95);backdrop-filter:blur(16px);border-bottom:1px solid rgba(108,99,255,0.2);padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:72px;}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;}
+.logo-mark{width:44px;height:44px;background:linear-gradient(135deg,var(--violet),var(--gold));border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;font-weight:900;color:var(--deep);font-family:'Playfair Display',serif;}
+.logo-text-wrap{display:flex;flex-direction:column;line-height:1.15;}
+.logo-name{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:700;color:var(--white);letter-spacing:0.3px;}
+.logo-tagline{font-size:0.6rem;color:var(--gold);letter-spacing:2.5px;text-transform:uppercase;}
+.nav-links{display:flex;gap:28px;list-style:none;}
+.nav-links a{color:rgba(255,255,255,0.75);text-decoration:none;font-size:0.85rem;font-weight:500;transition:color 0.2s;}
+.nav-links a:hover{color:var(--violet-light);}
+.nav-actions{display:flex;gap:10px;align-items:center;}
+.btn-nav-outline{border:1.5px solid rgba(108,99,255,0.5);color:var(--violet-light);background:transparent;padding:9px 20px;border-radius:8px;font-size:0.83rem;font-weight:600;cursor:pointer;text-decoration:none;transition:all 0.2s;}
+.btn-nav-outline:hover{background:rgba(108,99,255,0.15);border-color:var(--violet-light);}
+.btn-nav-fill{background:linear-gradient(135deg,var(--violet),#8b5cf6);color:white;padding:9px 22px;border-radius:8px;font-size:0.83rem;font-weight:600;cursor:pointer;text-decoration:none;border:none;box-shadow:0 4px 20px rgba(108,99,255,0.4);transition:opacity 0.2s;}
+.btn-nav-fill:hover{opacity:0.88;}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;}
+.hamburger span{width:24px;height:2px;background:white;border-radius:2px;}
+
+/* HERO */
+.hero{min-height:100vh;background:linear-gradient(135deg,var(--deep) 0%,var(--royal) 50%,var(--indigo) 100%);display:flex;align-items:center;position:relative;overflow:hidden;padding:100px 5% 80px;}
+.hero-glow{position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(108,99,255,0.25),transparent 70%);top:50%;left:55%;transform:translate(-50%,-50%);pointer-events:none;}
+.hero-glow2{position:absolute;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(245,200,66,0.12),transparent 70%);top:20%;left:70%;pointer-events:none;}
+.hero-content{position:relative;z-index:2;max-width:600px;}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(245,200,66,0.12);border:1px solid rgba(245,200,66,0.35);border-radius:100px;padding:7px 18px;margin-bottom:28px;color:var(--gold);font-size:0.75rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;}
+.hero-badge .dot{width:7px;height:7px;background:var(--gold);border-radius:50%;animation:blink 1.5s ease-in-out infinite;}
+@keyframes blink{0%,100%{opacity:1;}50%{opacity:0.3;}}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.8rem,5.5vw,4.6rem);font-weight:900;line-height:1.08;color:var(--white);margin-bottom:8px;letter-spacing:-1px;}
+.hero h1 .accent{background:linear-gradient(135deg,var(--gold),#fde68a);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.hero-sub{color:rgba(255,255,255,0.6);font-size:1.05rem;line-height:1.75;margin:20px 0 40px;max-width:500px;}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap;}
+.btn-gold{background:linear-gradient(135deg,var(--gold),var(--gold-dark));color:var(--deep);padding:15px 34px;border-radius:12px;border:none;font-size:0.95rem;font-weight:700;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:8px;box-shadow:0 8px 32px rgba(245,200,66,0.45);transition:transform 0.2s,box-shadow 0.2s;}
+.btn-gold:hover{transform:translateY(-3px);box-shadow:0 14px 40px rgba(245,200,66,0.55);}
+.btn-ghost{border:1.5px solid rgba(255,255,255,0.25);color:white;padding:15px 30px;border-radius:12px;font-size:0.95rem;font-weight:500;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:8px;background:transparent;transition:all 0.2s;}
+.btn-ghost:hover{border-color:var(--violet-light);background:rgba(108,99,255,0.15);}
+.hero-counters{display:flex;gap:40px;margin-top:60px;padding-top:40px;border-top:1px solid rgba(255,255,255,0.1);flex-wrap:wrap;}
+.counter-item .num{font-family:'Playfair Display',serif;font-size:2.6rem;font-weight:900;color:var(--white);line-height:1;}
+.counter-item .num span{color:var(--gold);}
+.counter-item .lbl{color:rgba(255,255,255,0.45);font-size:0.78rem;margin-top:4px;letter-spacing:0.3px;}
+/* floating card */
+.hero-float-card{position:absolute;right:5%;top:50%;transform:translateY(-50%);width:min(380px,38%);z-index:2;}
+.float-card{background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:20px;padding:28px;backdrop-filter:blur(12px);}
+.float-card-title{color:var(--gold);font-size:0.72rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:18px;}
+.course-pills{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px;}
+.pill{padding:7px 14px;border-radius:100px;font-size:0.75rem;font-weight:600;border:1px solid;}
+.pill.blue{background:rgba(108,99,255,0.2);border-color:rgba(108,99,255,0.4);color:var(--violet-light);}
+.pill.gold{background:rgba(245,200,66,0.15);border-color:rgba(245,200,66,0.4);color:var(--gold);}
+.pill.green{background:rgba(16,185,129,0.15);border-color:rgba(16,185,129,0.4);color:#6ee7b7;}
+.next-batch{background:rgba(108,99,255,0.15);border:1px solid rgba(108,99,255,0.3);border-radius:12px;padding:14px 18px;display:flex;justify-content:space-between;align-items:center;margin-top:12px;}
+.batch-label{color:rgba(255,255,255,0.5);font-size:0.72rem;text-transform:uppercase;letter-spacing:1px;}
+.batch-date{color:white;font-size:0.88rem;font-weight:600;}
+.batch-seats{background:rgba(245,200,66,0.2);color:var(--gold);padding:4px 10px;border-radius:6px;font-size:0.7rem;font-weight:700;}
+
+/* TRUST BAR */
+.trust-bar{background:var(--cream);border-bottom:1px solid var(--border);padding:20px 5%;display:flex;align-items:center;justify-content:center;gap:48px;flex-wrap:wrap;}
+.trust-item{display:flex;align-items:center;gap:10px;color:var(--gray);font-size:0.82rem;font-weight:500;}
+.trust-item span{font-size:1.2rem;}
+
+/* SECTIONS */
+section{padding:96px 5%;}
+.sec-label{color:var(--violet);font-size:0.72rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:10px;}
+.sec-title{font-family:'Playfair Display',serif;font-size:clamp(2rem,3.5vw,2.8rem);font-weight:700;color:var(--text);line-height:1.2;margin-bottom:14px;}
+.sec-sub{color:var(--gray);font-size:0.98rem;line-height:1.75;max-width:520px;}
+.centered{text-align:center;}
+.centered .sec-sub{margin:0 auto;}
+
+/* COURSES */
+.courses-bg{background:var(--deep);}
+.courses-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin-top:56px;}
+.course-card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:18px;padding:30px 26px;transition:transform 0.25s,border-color 0.25s;cursor:pointer;position:relative;overflow:hidden;}
+.course-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--violet),var(--gold));transform:scaleX(0);transform-origin:left;transition:transform 0.35s;}
+.course-card:hover{transform:translateY(-6px);border-color:rgba(108,99,255,0.4);}
+.course-card:hover::before{transform:scaleX(1);}
+.course-emoji{font-size:2.4rem;margin-bottom:18px;display:block;}
+.course-name{font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:700;color:var(--white);margin-bottom:8px;}
+.course-desc{color:rgba(255,255,255,0.5);font-size:0.84rem;line-height:1.65;margin-bottom:20px;}
+.course-meta{display:flex;gap:16px;flex-wrap:wrap;}
+.course-tag{background:rgba(108,99,255,0.15);color:var(--violet-light);padding:4px 12px;border-radius:100px;font-size:0.72rem;font-weight:600;}
+.course-tag.g{background:rgba(245,200,66,0.12);color:var(--gold);}
+
+/* ADMISSION PROCESS */
+.admission{background:var(--cream);}
+.steps-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0;margin-top:60px;position:relative;}
+.steps-row::before{content:'';position:absolute;top:36px;left:calc(200px/2);right:calc(200px/2);height:2px;background:linear-gradient(90deg,var(--violet),var(--gold));z-index:0;}
+.step{text-align:center;padding:0 16px;position:relative;z-index:1;}
+.step-num{width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,var(--violet),#8b5cf6);color:white;font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:900;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;box-shadow:0 8px 30px rgba(108,99,255,0.4);}
+.step-title{font-size:0.92rem;font-weight:700;color:var(--text);margin-bottom:8px;}
+.step-desc{font-size:0.8rem;color:var(--gray);line-height:1.6;}
+
+/* ADMISSION FORM */
+.admission-form-section{background:linear-gradient(135deg,var(--deep),var(--royal));}
+.form-wrap{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;}
+.form-info .sec-title{color:var(--white);}
+.form-info .sec-sub{color:rgba(255,255,255,0.55);}
+.perks{margin-top:32px;display:flex;flex-direction:column;gap:18px;}
+.perk{display:flex;gap:14px;align-items:flex-start;}
+.perk-icon{width:42px;height:42px;background:rgba(245,200,66,0.15);border:1px solid rgba(245,200,66,0.3);border-radius:11px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;}
+.perk h4{color:white;font-size:0.9rem;font-weight:600;margin-bottom:3px;}
+.perk p{color:rgba(255,255,255,0.5);font-size:0.8rem;line-height:1.55;}
+.the-form{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:22px;padding:40px 36px;}
+.form-head{font-family:'Playfair Display',serif;font-size:1.6rem;color:white;font-weight:700;margin-bottom:6px;}
+.form-headSub{color:rgba(255,255,255,0.45);font-size:0.83rem;margin-bottom:28px;}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.fg{margin-bottom:16px;}
+.fg label{display:block;color:rgba(255,255,255,0.5);font-size:0.72rem;font-weight:700;letter-spacing:0.8px;text-transform:uppercase;margin-bottom:7px;}
+.fg input,.fg select,.fg textarea{width:100%;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.14);color:white;border-radius:10px;padding:12px 15px;font-size:0.88rem;font-family:'Plus Jakarta Sans',sans-serif;outline:none;transition:border-color 0.2s;}
+.fg input::placeholder,.fg textarea::placeholder{color:rgba(255,255,255,0.28);}
+.fg select option{background:var(--royal);color:white;}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--violet-light);}
+.fg textarea{resize:none;height:80px;}
+.prog-bar-wrap{background:rgba(255,255,255,0.08);border-radius:100px;height:6px;margin-bottom:24px;}
+.prog-bar{background:linear-gradient(90deg,var(--violet),var(--gold));height:6px;border-radius:100px;transition:width 0.4s;}
+.prog-label{color:rgba(255,255,255,0.4);font-size:0.72rem;margin-bottom:8px;}
+.btn-submit{width:100%;background:linear-gradient(135deg,var(--gold),var(--gold-dark));color:var(--deep);padding:15px;border-radius:12px;border:none;font-size:0.95rem;font-weight:700;cursor:pointer;box-shadow:0 8px 30px rgba(245,200,66,0.4);transition:opacity 0.2s;font-family:'Plus Jakarta Sans',sans-serif;}
+.btn-submit:hover{opacity:0.9;}
+.form-steps-nav{display:flex;gap:8px;margin-bottom:20px;}
+.fstep-dot{width:28px;height:6px;border-radius:3px;background:rgba(255,255,255,0.12);transition:background 0.3s;}
+.fstep-dot.active{background:var(--violet);}
+.fstep-dot.done{background:var(--green);}
+
+/* TEACHERS */
+.teachers{background:white;}
+.teachers-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;margin-top:52px;}
+.teacher-card{border-radius:18px;overflow:hidden;border:1px solid var(--border);transition:transform 0.25s,box-shadow 0.25s;}
+.teacher-card:hover{transform:translateY(-6px);box-shadow:0 20px 50px rgba(0,0,0,0.09);}
+.teacher-photo{height:190px;display:flex;align-items:center;justify-content:center;font-size:5rem;}
+.tp-v{background:linear-gradient(135deg,var(--deep),var(--indigo));}
+.tp-g{background:linear-gradient(135deg,#064e3b,#065f46);}
+.tp-o{background:linear-gradient(135deg,#78350f,#92400e);}
+.tp-b{background:linear-gradient(135deg,#1e3a5f,#1d4ed8);}
+.teacher-info{padding:22px 18px;}
+.teacher-name{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:var(--text);margin-bottom:3px;}
+.teacher-role{color:var(--violet);font-size:0.75rem;font-weight:700;letter-spacing:0.5px;text-transform:uppercase;margin-bottom:10px;}
+.teacher-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px;}
+.t-tag{background:var(--gray-light);color:var(--gray);padding:3px 10px;border-radius:100px;font-size:0.7rem;font-weight:600;}
+.teacher-exp{font-size:0.78rem;color:var(--gray);}
+
+/* RESULTS */
+.results-section{background:linear-gradient(135deg,var(--deep),var(--royal));padding:96px 5%;}
+.results-header{text-align:center;margin-bottom:64px;}
+.results-header .sec-title{color:white;}
+.results-header .sec-sub{color:rgba(255,255,255,0.55);margin:0 auto;}
+.results-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;}
+.result-card{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:18px;padding:30px 24px;text-align:center;transition:border-color 0.2s,transform 0.2s;}
+.result-card:hover{border-color:rgba(245,200,66,0.4);transform:translateY(-4px);}
+.result-pct{font-family:'Playfair Display',serif;font-size:3rem;font-weight:900;background:linear-gradient(135deg,var(--gold),#fde68a);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;}
+.result-exam{color:white;font-size:0.88rem;font-weight:600;margin:8px 0 4px;}
+.result-year{color:rgba(255,255,255,0.4);font-size:0.75rem;}
+.result-rank{background:rgba(245,200,66,0.15);color:var(--gold);padding:4px 12px;border-radius:100px;font-size:0.7rem;font-weight:700;margin-top:12px;display:inline-block;}
+
+/* TESTIMONIALS */
+.testi{background:var(--cream);}
+.testi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:22px;margin-top:52px;}
+.testi-card{background:white;border:1px solid var(--border);border-radius:18px;padding:30px 26px;}
+.testi-stars{color:var(--gold);font-size:0.95rem;letter-spacing:3px;margin-bottom:14px;}
+.testi-quote{font-family:'Playfair Display',serif;font-size:1.05rem;line-height:1.7;color:var(--text);margin-bottom:22px;font-style:italic;}
+.testi-author{display:flex;gap:12px;align-items:center;}
+.testi-av{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;}
+.tav-v{background:linear-gradient(135deg,var(--violet),#8b5cf6);}
+.tav-g{background:linear-gradient(135deg,#059669,#10b981);}
+.tav-o{background:linear-gradient(135deg,#d97706,#f59e0b);}
+.testi-name{font-weight:700;font-size:0.88rem;color:var(--text);}
+.testi-role{font-size:0.75rem;color:var(--gray);}
+
+/* GALLERY */
+.gallery{background:white;padding:96px 5%;}
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:52px;}
+.gallery-item{border-radius:14px;overflow:hidden;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;font-size:3.5rem;transition:transform 0.25s;}
+.gallery-item:hover{transform:scale(1.03);}
+.gi-1{background:linear-gradient(135deg,#1a1560,#302b8a);grid-row:span 2;}
+.gi-2{background:linear-gradient(135deg,#064e3b,#065f46);}
+.gi-3{background:linear-gradient(135deg,#78350f,#b45309);}
+.gi-4{background:linear-gradient(135deg,#1e3a5f,#1d4ed8);}
+.gi-5{background:linear-gradient(135deg,#4c1d95,#6d28d9);}
+.gi-6{background:linear-gradient(135deg,#0f172a,#1e293b);grid-column:span 2;}
+
+/* FEES */
+.fees{background:var(--cream);padding:96px 5%;}
+.fees-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;margin-top:52px;}
+.fee-card{background:white;border:1px solid var(--border);border-radius:18px;padding:36px 28px;text-align:center;position:relative;transition:transform 0.25s,box-shadow 0.25s;}
+.fee-card:hover{transform:translateY(-6px);box-shadow:0 20px 50px rgba(0,0,0,0.08);}
+.fee-card.popular{border-color:var(--violet);box-shadow:0 8px 40px rgba(108,99,255,0.2);}
+.fee-popular-badge{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,var(--violet),#8b5cf6);color:white;padding:5px 18px;border-radius:100px;font-size:0.72rem;font-weight:700;white-space:nowrap;}
+.fee-class{color:var(--gray);font-size:0.78rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:12px;}
+.fee-price{font-family:'Playfair Display',serif;font-size:2.8rem;font-weight:900;color:var(--text);line-height:1;}
+.fee-price span{font-size:1.1rem;font-weight:500;color:var(--gray);}
+.fee-period{color:var(--gray);font-size:0.78rem;margin-bottom:22px;}
+.fee-list{list-style:none;text-align:left;margin-bottom:28px;display:flex;flex-direction:column;gap:10px;}
+.fee-list li{font-size:0.84rem;color:var(--gray);display:flex;gap:10px;align-items:flex-start;}
+.fee-list li::before{content:'✓';color:var(--green);font-weight:700;flex-shrink:0;}
+.btn-fee-apply{width:100%;background:linear-gradient(135deg,var(--violet),#8b5cf6);color:white;padding:13px;border-radius:10px;border:none;font-size:0.88rem;font-weight:600;cursor:pointer;transition:opacity 0.2s;font-family:'Plus Jakarta Sans',sans-serif;}
+.btn-fee-apply:hover{opacity:0.88;}
+.btn-fee-outline{width:100%;background:transparent;color:var(--violet);padding:13px;border-radius:10px;border:2px solid var(--violet);font-size:0.88rem;font-weight:600;cursor:pointer;transition:all 0.2s;font-family:'Plus Jakarta Sans',sans-serif;}
+.btn-fee-outline:hover{background:rgba(108,99,255,0.08);}
+
+/* FAQ */
+.faq{background:white;padding:96px 5%;}
+.faq-wrap{max-width:720px;margin:52px auto 0;}
+.faq-item{border-bottom:1px solid var(--border);overflow:hidden;}
+.faq-q{padding:22px 0;display:flex;justify-content:space-between;align-items:center;cursor:pointer;gap:16px;}
+.faq-q-text{font-size:0.95rem;font-weight:600;color:var(--text);}
+.faq-arrow{font-size:1rem;color:var(--violet);transition:transform 0.3s;flex-shrink:0;}
+.faq-a{max-height:0;overflow:hidden;transition:max-height 0.4s ease;}
+.faq-a-inner{padding:0 0 20px;color:var(--gray);font-size:0.87rem;line-height:1.75;}
+.faq-item.open .faq-arrow{transform:rotate(180deg);}
+.faq-item.open .faq-a{max-height:200px;}
+
+/* MAP & CONTACT */
+.contact-section{background:var(--deep);}
+.contact-wrap{display:grid;grid-template-columns:1fr 2fr;}
+.contact-info{padding:80px 6%;display:flex;flex-direction:column;justify-content:center;}
+.contact-info .sec-title{color:white;margin-bottom:32px;}
+.contact-items{display:flex;flex-direction:column;gap:22px;}
+.ci{display:flex;gap:16px;align-items:flex-start;}
+.ci-icon{font-size:1.3rem;margin-top:2px;}
+.ci h4{color:rgba(255,255,255,0.4);font-size:0.7rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:4px;}
+.ci p{color:rgba(255,255,255,0.8);font-size:0.9rem;line-height:1.6;}
+.ci a{color:var(--violet-light);text-decoration:none;}
+.map-box iframe{width:100%;height:100%;min-height:480px;border:none;display:block;}
+
+/* FOOTER */
+footer{background:#080618;padding:64px 5% 32px;border-top:1px solid rgba(255,255,255,0.05);}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:52px;}
+.footer-about p{color:rgba(255,255,255,0.4);font-size:0.83rem;line-height:1.7;margin:14px 0 22px;max-width:270px;}
+.footer-socials{display:flex;gap:10px;}
+.fsoc{width:38px;height:38px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:10px;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.5);text-decoration:none;font-size:1rem;transition:all 0.2s;}
+.fsoc:hover{background:var(--violet);border-color:var(--violet);color:white;}
+.footer-col h4{color:white;font-size:0.85rem;font-weight:600;margin-bottom:18px;}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:11px;}
+.footer-col ul a{color:rgba(255,255,255,0.4);text-decoration:none;font-size:0.82rem;transition:color 0.2s;}
+.footer-col ul a:hover{color:var(--violet-light);}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.06);padding-top:26px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
+.footer-bottom p{color:rgba(255,255,255,0.28);font-size:0.78rem;}
+.footer-bottom a{color:rgba(255,255,255,0.28);text-decoration:none;}
+.footer-bottom a.gsd{color:var(--violet-light);}
+
+/* WA FLOAT */
+.wa-float{position:fixed;bottom:28px;right:28px;z-index:9999;width:58px;height:58px;background:#25d366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 30px rgba(37,211,102,0.5);text-decoration:none;animation:wabounce 3s ease-in-out infinite;}
+.wa-float:hover{transform:scale(1.1);}
+@keyframes wabounce{0%,100%{transform:translateY(0);}50%{transform:translateY(-7px);}}
+.wa-float svg{width:30px;height:30px;fill:white;}
+.wa-tip{position:absolute;right:66px;background:white;color:var(--text);padding:7px 13px;border-radius:8px;font-size:0.75rem;font-weight:600;white-space:nowrap;box-shadow:0 4px 20px rgba(0,0,0,0.12);opacity:0;pointer-events:none;transition:opacity 0.2s;}
+.wa-float:hover .wa-tip{opacity:1;}
+
+/* MOBILE MENU */
+.mob-menu{display:none;position:fixed;top:72px;left:0;right:0;background:rgba(15,12,41,0.98);border-top:1px solid rgba(255,255,255,0.08);padding:24px 5%;flex-direction:column;gap:18px;z-index:999;}
+.mob-menu.open{display:flex;}
+.mob-menu a{color:rgba(255,255,255,0.8);text-decoration:none;font-size:1rem;font-weight:500;}
+
+/* MODAL */
+.modal-bg{position:fixed;inset:0;background:rgba(0,0,0,0.75);backdrop-filter:blur(6px);z-index:8000;display:none;align-items:center;justify-content:center;padding:20px;}
+.modal-bg.show{display:flex;}
+.modal-box{background:white;border-radius:22px;max-width:520px;width:100%;padding:44px 38px;position:relative;animation:popIn 0.3s ease;}
+@keyframes popIn{from{transform:scale(0.88);opacity:0;}to{transform:scale(1);opacity:1;}}
+.modal-x{position:absolute;top:20px;right:20px;background:none;border:none;font-size:1.3rem;cursor:pointer;color:var(--gray);}
+.modal-box h2{font-family:'Playfair Display',serif;font-size:1.7rem;font-weight:700;color:var(--text);margin-bottom:6px;}
+.modal-box p{color:var(--gray);font-size:0.85rem;margin-bottom:24px;}
+.modal-box .fg label{color:var(--gray);}
+.modal-box .fg input,.modal-box .fg select{background:var(--gray-light);border-color:var(--border);color:var(--text);}
+.modal-box .fg input:focus,.modal-box .fg select:focus{border-color:var(--violet);}
+.success-screen{display:none;text-align:center;padding:24px 0;}
+.success-screen .emoji{font-size:3.5rem;margin-bottom:14px;}
+.success-screen h3{font-family:'Playfair Display',serif;font-size:1.7rem;color:var(--text);margin-bottom:8px;}
+.success-screen p{color:var(--gray);font-size:0.88rem;line-height:1.6;}
+
+/* SCROLL REVEAL */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity 0.6s ease,transform 0.6s ease;}
+.reveal.visible{opacity:1;transform:none;}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .hero-float-card{display:none;}
+  .form-wrap{grid-template-columns:1fr;}
+  .contact-wrap{grid-template-columns:1fr;}
+  .map-box iframe{min-height:280px;}
+  .footer-grid{grid-template-columns:1fr 1fr;}
+  .gallery-grid{grid-template-columns:1fr 1fr;}
+  .gi-1{grid-row:auto;}
+  .gi-6{grid-column:auto;}
+}
+@media(max-width:640px){
+  .nav-links,.nav-actions{display:none;}
+  .hamburger{display:flex;}
+  section{padding:64px 5%;}
+  .frow{grid-template-columns:1fr;}
+  .hero-counters{gap:20px;}
+  .steps-row::before{display:none;}
+  .footer-grid{grid-template-columns:1fr;}
+  .gallery-grid{grid-template-columns:1fr;}
+  .gi-1,.gi-6{grid-column:auto;grid-row:auto;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="#" class="logo">
+    <div class="logo-mark">B</div>
+    <div class="logo-text-wrap">
+      <span class="logo-name">BrightMind Academy</span>
+      <span class="logo-tagline">Where Excellence Begins</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#courses">Courses</a></li>
+    <li><a href="#admission">Admission</a></li>
+    <li><a href="#teachers">Faculty</a></li>
+    <li><a href="#results">Results</a></li>
+    <li><a href="#fees">Fees</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav-actions">
+    <a href="tel:+911234567890" class="btn-nav-outline">📞 Call Us</a>
+    <a href="#admission-form" class="btn-nav-fill">Apply Now →</a>
+  </div>
+  <div class="hamburger" onclick="toggleMob()"><span></span><span></span><span></span></div>
+</nav>
+<div class="mob-menu" id="mobMenu">
+  <a href="#courses" onclick="toggleMob()">Courses</a>
+  <a href="#admission" onclick="toggleMob()">Admission</a>
+  <a href="#teachers" onclick="toggleMob()">Faculty</a>
+  <a href="#results" onclick="toggleMob()">Results</a>
+  <a href="#fees" onclick="toggleMob()">Fees</a>
+  <a href="#contact" onclick="toggleMob()">Contact</a>
+  <a href="#admission-form" class="btn-nav-fill" onclick="toggleMob()">Apply Now →</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="particles" id="particles"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-glow2"></div>
+  <div class="hero-content">
+    <div class="hero-badge"><span class="dot"></span>Admissions Open 2025–26</div>
+    <h1>Shape Your<br><span class="accent">Future Here.</span></h1>
+    <p class="hero-sub">From Nursery to Class 12, IIT-JEE, NEET & Skill Courses — expert faculty, proven results, and a culture of excellence that transforms students into achievers.</p>
+    <div class="hero-btns">
+      <a href="#admission-form" class="btn-gold">🎓 Apply for Admission</a>
+      <a href="#courses" class="btn-ghost">📚 View All Courses</a>
+    </div>
+    <div class="hero-counters">
+      <div class="counter-item"><div class="num">98<span>%</span></div><div class="lbl">Board Results</div></div>
+      <div class="counter-item"><div class="num">3K<span>+</span></div><div class="lbl">Students</div></div>
+      <div class="counter-item"><div class="num">50<span>+</span></div><div class="lbl">Expert Faculty</div></div>
+      <div class="counter-item"><div class="num">15<span>yrs</span></div><div class="lbl">Of Excellence</div></div>
+    </div>
+  </div>
+  <div class="hero-float-card">
+    <div class="float-card">
+      <div class="float-card-title">🎯 Available Courses</div>
+      <div class="course-pills">
+        <span class="pill blue">Nursery – KG</span>
+        <span class="pill gold">Class 1–10</span>
+        <span class="pill green">Class 11–12</span>
+        <span class="pill blue">IIT-JEE</span>
+        <span class="pill gold">NEET</span>
+        <span class="pill green">Spoken English</span>
+        <span class="pill blue">Coding</span>
+        <span class="pill gold">MHT-CET</span>
+      </div>
+      <div class="next-batch">
+        <div>
+          <div class="batch-label">Next Batch Starts</div>
+          <div class="batch-date">📅 1st August 2025</div>
+        </div>
+        <span class="batch-seats">8 Seats Left</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-item"><span>🏆</span> CBSE Affiliated School</div>
+  <div class="trust-item"><span>✅</span> ISO 9001:2015 Certified</div>
+  <div class="trust-item"><span>🎯</span> 98% Board Pass Rate</div>
+  <div class="trust-item"><span>🏫</span> Smart Classrooms</div>
+  <div class="trust-item"><span>🚌</span> Transport Available</div>
+  <div class="trust-item"><span>🍱</span> Nutritious Meals Provided</div>
+</div>
+
+<!-- COURSES -->
+<section class="courses-bg" id="courses">
+  <div class="centered">
+    <div class="sec-label" style="color:var(--violet-light)">What We Offer</div>
+    <h2 class="sec-title" style="color:white">Programs & Courses</h2>
+    <p class="sec-sub" style="color:rgba(255,255,255,0.5);margin:0 auto;">From early childhood education to competitive entrance coaching — every learning stage, expertly covered.</p>
+  </div>
+  <div class="courses-grid">
+    <div class="course-card reveal">
+      <span class="course-emoji">🌱</span>
+      <div class="course-name">Pre-Primary (Nursery–KG)</div>
+      <p class="course-desc">Activity-based learning, phonics, Montessori methods, and holistic early childhood development in a nurturing environment.</p>
+      <div class="course-meta"><span class="course-tag">Age 2–6</span><span class="course-tag g">Play-Based</span></div>
+    </div>
+    <div class="course-card reveal">
+      <span class="course-emoji">📖</span>
+      <div class="course-name">Primary School (Class 1–5)</div>
+      <p class="course-desc">Strong foundation in Maths, English, Science & Hindi with CBSE curriculum, creative arts, and regular assessments.</p>
+      <div class="course-meta"><span class="course-tag">CBSE</span><span class="course-tag g">Sports Included</span></div>
+    </div>
+    <div class="course-card reveal">
+      <span class="course-emoji">🔬</span>
+      <div class="course-name">Secondary (Class 6–10)</div>
+      <p class="course-desc">Science, Maths, Social Studies and Language with competitive exam preparation built into the curriculum.</p>
+      <div class="course-meta"><span class="course-tag">Board Prep</span><span class="course-tag g">Lab Access</span></div>
+    </div>
+    <div class="course-card reveal">
+      <span class="course-emoji">⚗️</span>
+      <div class="course-name">Senior Secondary (11–12)</div>
+      <p class="course-desc">Science & Commerce streams with expert subject teachers, practical labs, and career counselling sessions.</p>
+      <div class="course-meta"><span class="course-tag">Science</span><span class="course-tag g">Commerce</span></div>
+    </div>
+    <div class="course-card reveal">
+      <span class="course-emoji">🚀</span>
+      <div class="course-name">IIT-JEE Coaching</div>
+      <p class="course-desc">Intensive 1-year & 2-year programs by IIT alumni faculty. 150+ students qualified in JEE Mains & Advanced.</p>
+      <div class="course-meta"><span class="course-tag">JEE Mains</span><span class="course-tag g">JEE Advanced</span></div>
+    </div>
+    <div class="course-card reveal">
+      <span class="course-emoji">🩺</span>
+      <div class="course-name">NEET Coaching</div>
+      <p class="course-desc">Structured Biology, Physics & Chemistry coaching with weekly tests, doubt sessions, and 94% success rate.</p>
+      <div class="course-meta"><span class="course-tag">NEET UG</span><span class="course-tag g">Medical</span></div>
+    </div>
+    <div class="course-card reveal">
+      <span class="course-emoji">💻</span>
+      <div class="course-name">Coding & Technology</div>
+      <p class="course-desc">Python, Web Development, AI basics and App Development for students aged 10 and above. Learn by building.</p>
+      <div class="course-meta"><span class="course-tag">Python</span><span class="course-tag g">Web Dev</span></div>
+    </div>
+    <div class="course-card reveal">
+      <span class="course-emoji">🗣️</span>
+      <div class="course-name">Spoken English & Communication</div>
+      <p class="course-desc">Confidence-building English speaking, public speaking, and personality development courses for all age groups.</p>
+      <div class="course-meta"><span class="course-tag">All Ages</span><span class="course-tag g">Personality Dev</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ADMISSION PROCESS -->
+<section class="admission" id="admission">
+  <div class="centered">
+    <div class="sec-label">Simple & Online</div>
+    <h2 class="sec-title">How to Get Admitted</h2>
+    <p class="sec-sub">Our 5-step admission process is fully online — quick, transparent, and designed for busy parents.</p>
+  </div>
+  <div class="steps-row">
+    <div class="step reveal">
+      <div class="step-num">1</div>
+      <div class="step-title">Fill Online Form</div>
+      <p class="step-desc">Complete the application form below or on WhatsApp in under 5 minutes.</p>
+    </div>
+    <div class="step reveal">
+      <div class="step-num">2</div>
+      <div class="step-title">Document Submission</div>
+      <p class="step-desc">Upload birth certificate, previous marksheets, and Aadhaar card via WhatsApp.</p>
+    </div>
+    <div class="step reveal">
+      <div class="step-num">3</div>
+      <div class="step-title">Interaction / Test</div>
+      <p class="step-desc">A brief friendly interaction or aptitude assessment (for coaching programs).</p>
+    </div>
+    <div class="step reveal">
+      <div class="step-num">4</div>
+      <div class="step-title">Seat Confirmation</div>
+      <p class="step-desc">Receive your admission offer letter and seat confirmation within 24 hours.</p>
+    </div>
+    <div class="step reveal">
+      <div class="step-num">5</div>
+      <div class="step-title">Fee Payment & Join</div>
+      <p class="step-desc">Pay fees online via UPI/bank transfer and join your class on the start date.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ADMISSION FORM -->
+<section class="admission-form-section" id="admission-form">
+  <div class="form-wrap">
+    <div class="form-info">
+      <div class="sec-label" style="color:var(--violet-light)">Apply Now</div>
+      <h2 class="sec-title" style="color:white;font-size:clamp(1.8rem,3vw,2.6rem);">Start Your Child's<br>Journey Today</h2>
+      <p style="color:rgba(255,255,255,0.55);font-size:0.95rem;line-height:1.75;margin-top:12px;">Fill the form and we'll contact you within 2 hours to guide you through the next steps.</p>
+      <div class="perks">
+        <div class="perk">
+          <div class="perk-icon">🎁</div>
+          <div><h4>Free Trial Class</h4><p>Every applicant gets a complimentary trial class before committing to enrolment.</p></div>
+        </div>
+        <div class="perk">
+          <div class="perk-icon">💰</div>
+          <div><h4>Scholarship Available</h4><p>Merit-based scholarships covering up to 100% of tuition fees for deserving students.</p></div>
+        </div>
+        <div class="perk">
+          <div class="perk-icon">📱</div>
+          <div><h4>WhatsApp Confirmation</h4><p>Instant admission status updates, schedule, and documents directly on WhatsApp.</p></div>
+        </div>
+        <div class="perk">
+          <div class="perk-icon">🚌</div>
+          <div><h4>Transport & Hostel</h4><p>AC school bus routes covering 15 km radius and hostel facility available.</p></div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="the-form" id="admissionFormBox">
+        <div class="prog-label" id="stepLabel">Step 1 of 3 — Student Details</div>
+        <div class="prog-bar-wrap"><div class="prog-bar" id="progBar" style="width:33%"></div></div>
+        <div class="form-steps-nav">
+          <div class="fstep-dot active" id="dot1"></div>
+          <div class="fstep-dot" id="dot2"></div>
+          <div class="fstep-dot" id="dot3"></div>
+        </div>
+        <!-- STEP 1 -->
+        <div id="formStep1">
+          <div class="form-head">Student Details</div>
+          <div class="form-headSub">Tell us about the student applying.</div>
+          <div class="frow">
+            <div class="fg"><label>Student First Name</label><input type="text" id="f_fname" placeholder="Aarav"></div>
+            <div class="fg"><label>Student Last Name</label><input type="text" id="f_lname" placeholder="Sharma"></div>
+          </div>
+          <div class="frow">
+            <div class="fg"><label>Date of Birth</label><input type="date" id="f_dob"></div>
+            <div class="fg"><label>Gender</label>
+              <select id="f_gender">
+                <option value="">Select</option>
+                <option>Male</option><option>Female</option><option>Other</option>
+              </select>
+            </div>
+          </div>
+          <div class="fg"><label>Applying for Class / Course</label>
+            <select id="f_class">
+              <option value="">Select Class / Course</option>
+              <option>Nursery / KG</option><option>Class 1–5</option><option>Class 6–8</option>
+              <option>Class 9–10</option><option>Class 11 Science</option><option>Class 11 Commerce</option>
+              <option>Class 12 Science</option><option>Class 12 Commerce</option>
+              <option>IIT-JEE (1 Year)</option><option>IIT-JEE (2 Year)</option>
+              <option>NEET Coaching</option><option>MHT-CET</option>
+              <option>Coding Course</option><option>Spoken English</option>
+            </select>
+          </div>
+          <button class="btn-submit" onclick="nextStep(2)">Next: Parent Details →</button>
+        </div>
+        <!-- STEP 2 -->
+        <div id="formStep2" style="display:none">
+          <div class="form-head">Parent / Guardian</div>
+          <div class="form-headSub">We'll use this to contact you regarding admission.</div>
+          <div class="frow">
+            <div class="fg"><label>Parent Name</label><input type="text" id="f_parent" placeholder="Rajesh Sharma"></div>
+            <div class="fg"><label>Relation</label>
+              <select id="f_relation"><option>Father</option><option>Mother</option><option>Guardian</option></select>
+            </div>
+          </div>
+          <div class="fg"><label>WhatsApp Number</label><input type="tel" id="f_phone" placeholder="+91 98765 43210"></div>
+          <div class="fg"><label>Email Address</label><input type="email" id="f_email" placeholder="rajesh@example.com"></div>
+          <div class="fg"><label>Current School / Institute (if any)</label><input type="text" id="f_school" placeholder="Leave blank if not applicable"></div>
+          <button class="btn-submit" onclick="nextStep(3)">Next: Final Details →</button>
+        </div>
+        <!-- STEP 3 -->
+        <div id="formStep3" style="display:none">
+          <div class="form-head">Almost Done!</div>
+          <div class="form-headSub">A few last details and we're all set.</div>
+          <div class="fg"><label>City / Area</label><input type="text" id="f_city" placeholder="Daund, Pune"></div>
+          <div class="fg"><label>How did you hear about us?</label>
+            <select id="f_source">
+              <option value="">Select</option>
+              <option>WhatsApp</option><option>Instagram</option><option>Facebook</option>
+              <option>Google Search</option><option>Friend / Relative</option><option>Banner / Poster</option>
+            </select>
+          </div>
+          <div class="fg"><label>Any specific questions or requirements?</label>
+            <textarea id="f_notes" placeholder="e.g. Scholarship eligibility, hostel, transport route…"></textarea>
+          </div>
+          <button class="btn-submit" onclick="submitForm()">🎓 Submit Application via WhatsApp</button>
+        </div>
+        <!-- SUCCESS -->
+        <div class="success-screen" id="formSuccess">
+          <div class="emoji">🎉</div>
+          <h3>Application Submitted!</h3>
+          <p>Opening WhatsApp to send your application to BrightMind Academy. Our team will contact you within 2 hours!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEACHERS -->
+<section class="teachers" id="teachers">
+  <div class="centered">
+    <div class="sec-label">Our Faculty</div>
+    <h2 class="sec-title">Learn from the Best</h2>
+    <p class="sec-sub">Our teachers are not just educators — they are mentors who inspire, guide, and unlock each student's full potential.</p>
+  </div>
+  <div class="teachers-grid">
+    <div class="teacher-card reveal">
+      <div class="teacher-photo tp-v">👨‍🏫</div>
+      <div class="teacher-info">
+        <div class="teacher-name">Prof. Amit Kulkarni</div>
+        <div class="teacher-role">Physics / IIT-JEE Head</div>
+        <div class="teacher-tags"><span class="t-tag">IIT Bombay Alumni</span><span class="t-tag">JEE Expert</span></div>
+        <div class="teacher-exp">⭐ 4.9 · 18 years experience</div>
+      </div>
+    </div>
+    <div class="teacher-card reveal">
+      <div class="teacher-photo tp-g">👩‍🏫</div>
+      <div class="teacher-info">
+        <div class="teacher-name">Dr. Priya Joshi</div>
+        <div class="teacher-role">Biology / NEET Faculty</div>
+        <div class="teacher-tags"><span class="t-tag">MBBS, AIMS</span><span class="t-tag">NEET Expert</span></div>
+        <div class="teacher-exp">⭐ 5.0 · 14 years experience</div>
+      </div>
+    </div>
+    <div class="teacher-card reveal">
+      <div class="teacher-photo tp-o">👨‍🏫</div>
+      <div class="teacher-info">
+        <div class="teacher-name">Mr. Suresh Patil</div>
+        <div class="teacher-role">Mathematics</div>
+        <div class="teacher-tags"><span class="t-tag">M.Sc Maths</span><span class="t-tag">Olympiad Coach</span></div>
+        <div class="teacher-exp">⭐ 4.8 · 20 years experience</div>
+      </div>
+    </div>
+    <div class="teacher-card reveal">
+      <div class="teacher-photo tp-b">👩‍🏫</div>
+      <div class="teacher-info">
+        <div class="teacher-name">Ms. Sneha Desai</div>
+        <div class="teacher-role">English & Communication</div>
+        <div class="teacher-tags"><span class="t-tag">MA English</span><span class="t-tag">Public Speaking</span></div>
+        <div class="teacher-exp">⭐ 4.9 · 12 years experience</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESULTS -->
+<section class="results-section" id="results">
+  <div class="results-header">
+    <div class="sec-label" style="color:var(--violet-light)">Proven Track Record</div>
+    <h2 class="sec-title">Our Results Speak</h2>
+    <p class="sec-sub">Year after year, BrightMind students outperform state and national averages in every board and entrance examination.</p>
+  </div>
+  <div class="results-grid">
+    <div class="result-card reveal">
+      <div class="result-pct">98%</div>
+      <div class="result-exam">Class 10 Board</div>
+      <div class="result-year">2024–25</div>
+      <div class="result-rank">🏆 District Rank #1</div>
+    </div>
+    <div class="result-card reveal">
+      <div class="result-pct">96%</div>
+      <div class="result-exam">Class 12 Science</div>
+      <div class="result-year">2024–25</div>
+      <div class="result-rank">State Top 50</div>
+    </div>
+    <div class="result-card reveal">
+      <div class="result-pct">150+</div>
+      <div class="result-exam">JEE Qualifiers</div>
+      <div class="result-year">Last 5 Years</div>
+      <div class="result-rank">IIT Selections: 22</div>
+    </div>
+    <div class="result-card reveal">
+      <div class="result-pct">94%</div>
+      <div class="result-exam">NEET Success Rate</div>
+      <div class="result-year">2024</div>
+      <div class="result-rank">MBBS Seats: 48+</div>
+    </div>
+    <div class="result-card reveal">
+      <div class="result-pct">3K+</div>
+      <div class="result-exam">Alumni Network</div>
+      <div class="result-year">Since 2009</div>
+      <div class="result-rank">Across 15 Countries</div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testi" id="testimonials">
+  <div class="centered">
+    <div class="sec-label">Parent & Student Reviews</div>
+    <h2 class="sec-title">What Our Community Says</h2>
+    <p class="sec-sub">Thousands of families trust BrightMind Academy with their children's futures. Here's what they say.</p>
+  </div>
+  <div class="testi-grid">
+    <div class="testi-card reveal">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-quote">"My son cracked JEE Advanced with AIR 847 this year. The faculty here is genuinely extraordinary — patient, knowledgeable, and truly invested in each student."</p>
+      <div class="testi-author">
+        <div class="testi-av tav-v">👨</div>
+        <div><div class="testi-name">Ramesh Kulkarni</div><div class="testi-role">Parent · JEE Advanced Student</div></div>
+      </div>
+    </div>
+    <div class="testi-card reveal">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-quote">"The online admission was so smooth! I filled the form, WhatsApped the documents, and my daughter's seat was confirmed the same day. Brilliant system."</p>
+      <div class="testi-author">
+        <div class="testi-av tav-g">👩</div>
+        <div><div class="testi-name">Sunita Pawar</div><div class="testi-role">Parent · Class 8 Student</div></div>
+      </div>
+    </div>
+    <div class="testi-card reveal">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-quote">"I scored 685/720 in NEET 2024. BrightMind's Biology faculty and weekly mock test strategy made all the difference. Forever grateful to this institution."</p>
+      <div class="testi-author">
+        <div class="testi-av tav-o">👩</div>
+        <div><div class="testi-name">Anjali Mhatre</div><div class="testi-role">NEET 2024 Qualifier · MBBS Admitted</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery">
+  <div class="centered">
+    <div class="sec-label">Campus Life</div>
+    <h2 class="sec-title">Life at BrightMind</h2>
+    <p class="sec-sub">Modern infrastructure, smart classrooms, science labs, and a vibrant campus — every day is an adventure in learning.</p>
+  </div>
+  <div class="gallery-grid">
+    <div class="gallery-item gi-1 reveal">🏫</div>
+    <div class="gallery-item gi-2 reveal">🔬</div>
+    <div class="gallery-item gi-3 reveal">🏆</div>
+    <div class="gallery-item gi-4 reveal">💻</div>
+    <div class="gallery-item gi-5 reveal">📚</div>
+    <div class="gallery-item gi-6 reveal">🎨</div>
+  </div>
+</section>
+
+<!-- FEES -->
+<section class="fees" id="fees">
+  <div class="centered">
+    <div class="sec-label">Transparent Pricing</div>
+    <h2 class="sec-title">Fee Structure 2025–26</h2>
+    <p class="sec-sub">No hidden charges. Clear, honest pricing with EMI options and scholarship support for deserving students.</p>
+  </div>
+  <div class="fees-grid">
+    <div class="fee-card reveal">
+      <div class="fee-class">Pre-Primary</div>
+      <div class="fee-price">₹24,000<span>/yr</span></div>
+      <div class="fee-period">Nursery – KG</div>
+      <ul class="fee-list">
+        <li>CBSE Curriculum</li>
+        <li>Activity Kit Included</li>
+        <li>Meals & Snacks</li>
+        <li>Parent Portal Access</li>
+        <li>Annual Day & Events</li>
+      </ul>
+      <button class="btn-fee-outline" onclick="openAdmModal()">Apply Now</button>
+    </div>
+    <div class="fee-card popular reveal">
+      <div class="fee-popular-badge">⭐ Most Popular</div>
+      <div class="fee-class">Secondary</div>
+      <div class="fee-price">₹42,000<span>/yr</span></div>
+      <div class="fee-period">Class 6–10</div>
+      <ul class="fee-list">
+        <li>CBSE Board Preparation</li>
+        <li>Science & Computer Lab</li>
+        <li>Digital Smart Classes</li>
+        <li>Weekly Mock Tests</li>
+        <li>Career Counselling</li>
+        <li>Transport Available</li>
+      </ul>
+      <button class="btn-fee-apply" onclick="openAdmModal()">Apply Now</button>
+    </div>
+    <div class="fee-card reveal">
+      <div class="fee-class">IIT-JEE / NEET</div>
+      <div class="fee-price">₹72,000<span>/yr</span></div>
+      <div class="fee-period">1-Year Program</div>
+      <ul class="fee-list">
+        <li>Expert IIT/AIIMS Faculty</li>
+        <li>Daily Practice Problems</li>
+        <li>Weekly Full Mock Tests</li>
+        <li>Doubt Clearing Sessions</li>
+        <li>Study Material Included</li>
+        <li>Scholarship for Toppers</li>
+      </ul>
+      <button class="btn-fee-outline" onclick="openAdmModal()">Apply Now</button>
+    </div>
+  </div>
+  <p style="text-align:center;color:var(--gray);font-size:0.82rem;margin-top:28px;">* EMI available in 3–6 instalments via UPI/bank transfer. Scholarships available. Call us for detailed fee breakdown.</p>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="centered">
+    <div class="sec-label">Got Questions?</div>
+    <h2 class="sec-title">Frequently Asked</h2>
+    <p class="sec-sub">Everything parents ask before joining BrightMind Academy — answered clearly.</p>
+  </div>
+  <div class="faq-wrap">
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        <span class="faq-q-text">What is the admission process and how long does it take?</span>
+        <span class="faq-arrow">▼</span>
+      </div>
+      <div class="faq-a"><div class="faq-a-inner">Our fully online 5-step process typically takes 24–48 hours. Fill the form above, submit documents via WhatsApp, attend a brief interaction, receive your offer letter, and pay fees to confirm your seat. Simple and fast.</div></div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        <span class="faq-q-text">Are scholarships available? Who is eligible?</span>
+        <span class="faq-arrow">▼</span>
+      </div>
+      <div class="faq-a"><div class="faq-a-inner">Yes! We offer merit-based scholarships from 25% to 100% fee waiver for students scoring above 85% in their previous board/school exams. Financial need-based scholarships are also available. Contact our team for details.</div></div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        <span class="faq-q-text">Is transport and hostel facility available?</span>
+        <span class="faq-arrow">▼</span>
+      </div>
+      <div class="faq-a"><div class="faq-a-inner">Yes, we have AC school buses covering 15 km radius across all major areas. Hostel facility with separate boys & girls wings, nutritious meals, study hall, and 24/7 security is also available for outstation students.</div></div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        <span class="faq-q-text">What medium of instruction is used?</span>
+        <span class="faq-arrow">▼</span>
+      </div>
+      <div class="faq-a"><div class="faq-a-inner">We follow English medium instruction for CBSE curriculum. For competitive coaching (JEE/NEET), we use bilingual instruction (English + Hindi/Marathi) to ensure complete concept clarity for all students.</div></div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        <span class="faq-q-text">Can I get a free demo / trial class before enrolling?</span>
+        <span class="faq-arrow">▼</span>
+      </div>
+      <div class="faq-a"><div class="faq-a-inner">Absolutely! Every prospective student gets a complimentary trial class in their chosen subject. This helps students and parents experience our teaching quality before making any commitment. Book via WhatsApp.</div></div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        <span class="faq-q-text">How can I track my child's progress?</span>
+        <span class="faq-arrow">▼</span>
+      </div>
+      <div class="faq-a"><div class="faq-a-inner">Parents get access to our digital Parent Portal where you can view attendance, test scores, homework submissions, teacher remarks, and upcoming events. Monthly PTM (Parent-Teacher Meetings) are also held regularly.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT & MAP -->
+<section class="contact-section" id="contact" style="padding:0;">
+  <div class="contact-wrap">
+    <div class="contact-info">
+      <div class="sec-label" style="color:var(--violet-light)">Visit Us</div>
+      <h2 class="sec-title">Find BrightMind Academy</h2>
+      <div class="contact-items">
+        <div class="ci">
+          <span class="ci-icon">📍</span>
+          <div><h4>Address</h4><p>Near ST Bus Stand, Main Road,<br>Daund, Pune – 413801, Maharashtra</p></div>
+        </div>
+        <div class="ci">
+          <span class="ci-icon">📞</span>
+          <div><h4>Phone</h4><p><a href="tel:+911234567890">+91 12345 67890</a><br><a href="tel:+911234567891">+91 12345 67891</a></p></div>
+        </div>
+        <div class="ci">
+          <span class="ci-icon">💬</span>
+          <div><h4>WhatsApp</h4><p><a href="https://wa.me/911234567890?text=Hello%2C%20I%20want%20to%20know%20more%20about%20admission%20at%20BrightMind%20Academy." target="_blank">Chat for Admission Info →</a></p></div>
+        </div>
+        <div class="ci">
+          <span class="ci-icon">🕐</span>
+          <div><h4>Office Hours</h4><p>Mon–Sat: 8:00 AM – 7:00 PM<br>Sunday: 10:00 AM – 2:00 PM</p></div>
+        </div>
+        <div class="ci">
+          <span class="ci-icon">📧</span>
+          <div><h4>Email</h4><p><a href="mailto:info@brightmindacademy.in">info@brightmindacademy.in</a></p></div>
+        </div>
+      </div>
+    </div>
+    <div class="map-box">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30384.14!2d74.5549!3d18.4576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc3f6c4e5a5d1c7%3A0x1!2sDaund%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1234567890" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-about">
+      <a href="#" class="logo">
+        <div class="logo-mark">B</div>
+        <div class="logo-text-wrap">
+          <span class="logo-name">BrightMind Academy</span>
+          <span class="logo-tagline">Where Excellence Begins</span>
+        </div>
+      </a>
+      <p>Empowering students from Nursery to Class 12, IIT-JEE, and NEET since 2009. 3,000+ alumni. Proudly serving Daund & Pune.</p>
+      <div class="footer-socials">
+        <a href="https://wa.me/911234567890" class="fsoc" target="_blank">💬</a>
+        <a href="https://instagram.com" class="fsoc" target="_blank">📸</a>
+        <a href="https://facebook.com" class="fsoc" target="_blank">👍</a>
+        <a href="https://youtube.com" class="fsoc" target="_blank">▶️</a>
+        <a href="https://t.me" class="fsoc" target="_blank">✈️</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Programs</h4>
+      <ul>
+        <li><a href="#">Pre-Primary (Nursery–KG)</a></li>
+        <li><a href="#">Primary (Class 1–5)</a></li>
+        <li><a href="#">Secondary (6–10)</a></li>
+        <li><a href="#">Senior Secondary</a></li>
+        <li><a href="#">IIT-JEE Coaching</a></li>
+        <li><a href="#">NEET Coaching</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#admission-form">Apply Online</a></li>
+        <li><a href="#teachers">Our Faculty</a></li>
+        <li><a href="#results">Results</a></li>
+        <li><a href="#fees">Fee Structure</a></li>
+        <li><a href="#">Student Portal</a></li>
+        <li><a href="#">Parent Portal</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:+911234567890">+91 12345 67890</a></li>
+        <li><a href="mailto:info@brightmindacademy.in">info@brightmindacademy.in</a></li>
+        <li><a href="#">Daund, Pune 413801</a></li>
+        <li><a href="https://wa.me/911234567890" target="_blank">WhatsApp Us</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 BrightMind Academy. All rights reserved. | <a href="#">Privacy Policy</a></p>
+    <p>Designed & Built by <a href="#" class="gsd">GrowSite Digital</a></p>
+  </div>
+</footer>
+
+<!-- WA FLOAT -->
+<a href="https://wa.me/911234567890?text=Hello%2C%20I%20want%20to%20know%20about%20admission%20at%20BrightMind%20Academy." class="wa-float" target="_blank">
+  <div class="wa-tip">Enquire on WhatsApp</div>
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- MODAL -->
+<div class="modal-bg" id="admModal">
+  <div class="modal-box">
+    <button class="modal-x" onclick="closeModal()">✕</button>
+    <div id="modalInner">
+      <h2>Quick Enquiry</h2>
+      <p>Send us your details and we'll call back within 1 hour.</p>
+      <div class="frow" style="margin-bottom:0;">
+        <div class="fg"><label>Your Name</label><input type="text" id="m_name" placeholder="Rajesh Sharma"></div>
+        <div class="fg"><label>WhatsApp No.</label><input type="tel" id="m_phone" placeholder="+91 98765 43210"></div>
+      </div>
+      <div class="fg"><label>Interested In</label>
+        <select id="m_interest">
+          <option>Class 1–5</option><option>Class 6–10</option><option>Class 11–12</option>
+          <option>IIT-JEE</option><option>NEET</option><option>Coding</option><option>Spoken English</option>
+        </select>
+      </div>
+      <button class="btn-submit" style="margin-top:8px;" onclick="submitModal()">Send Enquiry via WhatsApp →</button>
+    </div>
+    <div class="success-screen" id="modalSuccess">
+      <div class="emoji">✅</div>
+      <h3>Enquiry Sent!</h3>
+      <p>Opening WhatsApp now. Our team will respond within 1 hour during office hours.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+// Particles
+(function(){
+  const c=document.getElementById('particles');
+  const colors=['#6c63ff','#f5c842','#ffffff','#9c95ff'];
+  for(let i=0;i<18;i++){
+    const p=document.createElement('div');
+    p.className='particle';
+    const size=Math.random()*10+4;
+    p.style.cssText=`width:${size}px;height:${size}px;left:${Math.random()*100}%;background:${colors[Math.floor(Math.random()*colors.length)]};animation-duration:${Math.random()*15+8}s;animation-delay:${Math.random()*10}s;`;
+    c.appendChild(p);
+  }
+})();
+
+// Nav
+function toggleMob(){document.getElementById('mobMenu').classList.toggle('open');}
+window.addEventListener('scroll',()=>{
+  const n=document.getElementById('nav');
+  n.style.boxShadow=window.scrollY>40?'0 4px 30px rgba(0,0,0,0.4)':'none';
+});
+
+// FAQ
+function toggleFaq(el){
+  const item=el.parentElement;
+  document.querySelectorAll('.faq-item').forEach(i=>{if(i!==item)i.classList.remove('open');});
+  item.classList.toggle('open');
+}
+
+// Multi-step form
+let currentStep=1;
+function nextStep(n){
+  document.getElementById('formStep'+currentStep).style.display='none';
+  document.getElementById('dot'+(currentStep)).className='fstep-dot done';
+  currentStep=n;
+  document.getElementById('formStep'+currentStep).style.display='block';
+  document.getElementById('dot'+currentStep).className='fstep-dot active';
+  const pct=currentStep===2?66:99;
+  document.getElementById('progBar').style.width=pct+'%';
+  document.getElementById('stepLabel').textContent=`Step ${currentStep} of 3 — ${currentStep===2?'Parent Details':'Final Details'}`;
+}
+function submitForm(){
+  const fname=document.getElementById('f_fname').value;
+  const lname=document.getElementById('f_lname').value;
+  const cls=document.getElementById('f_class').value;
+  const parent=document.getElementById('f_parent').value;
+  const phone=document.getElementById('f_phone').value;
+  const city=document.getElementById('f_city').value;
+  const notes=document.getElementById('f_notes').value;
+  const msg=`🎓 *ADMISSION ENQUIRY – BrightMind Academy*\n\n👤 *Student:* ${fname} ${lname}\n📚 *Applying for:* ${cls}\n👨‍👩‍👧 *Parent:* ${parent}\n📱 *Phone:* ${phone}\n📍 *City:* ${city}\n\n💬 *Notes:* ${notes||'None'}\n\nKindly process this admission application. Thank you!`;
+  ['formStep3','dot3'].forEach(id=>{ if(id==='formStep3') document.getElementById(id).style.display='none'; });
+  document.getElementById('dot3').className='fstep-dot done';
+  document.getElementById('progBar').style.width='100%';
+  document.getElementById('formSuccess').style.display='block';
+  setTimeout(()=>window.open(`https://wa.me/911234567890?text=${encodeURIComponent(msg)}`,'_blank'),800);
+}
+
+// Modal
+function openAdmModal(){document.getElementById('admModal').classList.add('show');}
+function closeModal(){
+  document.getElementById('admModal').classList.remove('show');
+  document.getElementById('modalInner').style.display='block';
+  document.getElementById('modalSuccess').style.display='none';
+}
+function submitModal(){
+  const name=document.getElementById('m_name').value;
+  const phone=document.getElementById('m_phone').value;
+  const interest=document.getElementById('m_interest').value;
+  const msg=`Hello BrightMind Academy! 👋\n\nI'm interested in: *${interest}*\n\n👤 Name: ${name||'Not provided'}\n📱 Phone: ${phone||'Not provided'}\n\nPlease contact me with more details. Thank you!`;
+  document.getElementById('modalInner').style.display='none';
+  document.getElementById('modalSuccess').style.display='block';
+  setTimeout(()=>window.open(`https://wa.me/911234567890?text=${encodeURIComponent(msg)}`,'_blank'),700);
+}
+
+// Scroll reveal
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');}});
+},{threshold:0.08});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+// Time slot selection
+document.querySelectorAll('.slot').forEach(s=>{
+  s.addEventListener('click',()=>{
+    document.querySelectorAll('.slot').forEach(x=>x.classList.remove('active'));
+    s.classList.add('active');
+  });
+});
+</script>
+</body>
+</html>
